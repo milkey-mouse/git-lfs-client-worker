@@ -49,10 +49,10 @@ When a commit including this `.lfsconfig` change is checked out, Git LFS will no
 GitHub and GitLab both provide default LFS servers, but they are not ideal for this use case:
 
 - Storage space is limited.
-  - You can store up to 1 GiB of LFS objects across all repositories on GitHub's free tier. Additional storage costs $0.10/GiB-month [bundled with bandwidth](https://docs.github.com/en/billing/managing-billing-for-git-large-file-storage/about-billing-for-git-large-file-storage#purchasing-additional-storage-and-bandwidth).
+  - You can store up to 10 GiB of LFS objects across all repositories on GitHub's free tier. Additional storage costs $0.07/GiB-month.
   - You can store up to 5 GB on GitLab's free tier, but this includes [all other GitLab services](https://about.gitlab.com/pricing/faq-paid-storage-transfer/#q-what-constitutes-storage-usage). Additional storage must be bought in $60/year "[packs](https://about.gitlab.com/pricing/faq-paid-storage-transfer/#purchasing-additional-storage-and-transfer)".
 - Bandwidth is limited.
-  - You can download up to 1 GiB/month of LFS objects across all repositories on GitHub's free tier. Additional bandwidth costs $0.10/GiB [bundled with storage](https://docs.github.com/en/billing/managing-billing-for-git-large-file-storage/about-billing-for-git-large-file-storage#purchasing-additional-storage-and-bandwidth).
+  - You can download up to 10 GiB/month of LFS objects across all repositories on GitHub's free tier. Additional bandwidth costs $0.0875/GiB.
   - You can download up to 10 GB/month on GitLab's free tier, but this includes [all other GitLab services](https://about.gitlab.com/pricing/faq-paid-storage-transfer/#q-what-constitutes-transfer-usage). Additional bandwidth must be bought in $60/year "[packs](https://about.gitlab.com/pricing/faq-paid-storage-transfer/#purchasing-additional-storage-and-transfer)".
 - Latency is questionable.
   - GitHub's LFS server takes ~270ms to reply with an object's URL. The actual object store takes another 20-100ms to reply.
