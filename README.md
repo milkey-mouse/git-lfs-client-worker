@@ -58,7 +58,7 @@ GitHub and GitLab both provide default LFS servers, but they are not ideal for t
   - GitHub's LFS server takes ~270ms to reply with an object's URL. The actual object store takes another 20-100ms to reply.
   - Neither GitHub nor GitLab built their LFS servers with serving web content in mind (which, to be fair, is slightly cursed).
 
-Consider [setting up LFS S3 Proxy](https://github.com/milkey-mouse/git-lfs-s3-proxy) with [R2](https://developers.cloudflare.com/r2) as your LFS server instead. On Cloudflare's free tier, it can serve up to 10 GB of LFS objects with unlimited bandwidth and the lowest possible latency (your objects are in the same datacenters as the LFS Client Worker). If you have more than 10 GB of assets, additional storage is $0.015/GB-month, several times cheaper than GitHub or GitLab.
+**Consider [setting up LFS S3 Proxy](https://github.com/milkey-mouse/git-lfs-s3-proxy)** with [R2](https://developers.cloudflare.com/r2) as your LFS server instead. On Cloudflare's free tier, it can serve up to 10 GB of LFS objects with unlimited bandwidth and the lowest possible latency (your objects are in the same datacenters as the LFS Client Worker). If you have more than 10 GB of assets, additional storage is $0.015/GB-month, several times cheaper than GitHub or GitLab.
 
 If you decide to use the default LFS server, you'll still want to [explicitly specify its URL in `.lfsconfig`](https://github.com/milkey-mouse/git-lfs-s3-proxy#private-repo) as the LFS Client Worker has no other way of knowing it (workers don't know what repo their Pages site was built from).
 
